@@ -22,4 +22,7 @@
   --output_labels=/tf_files/retrained_labels.txt \  
   --image_dir=/tf_files/star_wars
   ```
+  
+5. Create label_image.py (load image and graph to tensorflow, get predictions)  
+6. Use `python label_image.py <image_path.jpg>` command to predict image  
 
