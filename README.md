@@ -7,6 +7,9 @@
 2. Setup docker  
   `docker run -it gcr.io/tensorflow/tensorflow:latest-devel`  
 
+3. Download images (use Fatkun batch download extension on google)
+  Put images in this format: tf_files/star_wars/vader, tf_files/star_wars/darth_maul
+
 3. Connect image files to docker (need at least 2 classes: tf_files/star_wars/vader, tf_files/star_wars/darth_maul)  
   `docker run -it -v /home/ec2-user/app/image_recognition_transfer_learning/tf_files:/tf_files/ gcr.io/tensorflow/tensorflow:latest-devel`  
 4. Retraining  
