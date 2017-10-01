@@ -9,14 +9,14 @@
 
 3. Connect image files to docker (need at least 2 classes: tf_files/star_wars/vader, tf_files/star_wars/darth_maul)  
   `docker run -it -v /home/ec2-user/app/image_recognition_transfer_learning/tf_files:/tf_files/ gcr.io/tensorflow/tensorflow:latest-devel`  
-
-
-# retraining  
-python tensorflow/examples/image_retraining/retrain.py \  
---bottleneck_dir=/tf_files/bottlenecks \  
---how_many_training_steps 500 \  
---model_dir=/tf_files/inception \  
---output_graph=/tf_files/retrained_graph.pb \  
---output_labels=/tf_files/retrained_labels.txt \  
---image_dir=/tf_files/star_wars
+4. Retraining  
+  ```python
+  python tensorflow/examples/image_retraining/retrain.py \  
+  --bottleneck_dir=/tf_files/bottlenecks \  
+  --how_many_training_steps 500 \  
+  --model_dir=/tf_files/inception \  
+  --output_graph=/tf_files/retrained_graph.pb \  
+  --output_labels=/tf_files/retrained_labels.txt \  
+  --image_dir=/tf_files/star_wars
+  ```
 
