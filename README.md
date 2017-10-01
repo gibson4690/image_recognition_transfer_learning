@@ -1,11 +1,15 @@
 # image_recognition_transfer_learning 
-https://www.youtube.com/watch?v=QfNvhPx5Px8  
+  https://www.youtube.com/watch?v=QfNvhPx5Px8  
 
 1. Install docker  
-http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#install_docker  
+  http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#install_docker  
 
-docker run -it gcr.io/tensorflow/tensorflow:latest-devel  
-docker run -it -v /home/ec2-user/app/image_recognition_transfer_learning/tf_files:/tf_files/ gcr.io/tensorflow/tensorflow:latest-devel  
+2. Setup docker  
+  `docker run -it gcr.io/tensorflow/tensorflow:latest-devel`  
+
+3. Connect image files to docker (need at least 2 classes: tf_files/star_wars/vader, tf_files/star_wars/darth_maul)  
+  `docker run -it -v /home/ec2-user/app/image_recognition_transfer_learning/tf_files:/tf_files/ gcr.io/tensorflow/tensorflow:latest-devel`  
+
 
 # retraining  
 python tensorflow/examples/image_retraining/retrain.py \  
